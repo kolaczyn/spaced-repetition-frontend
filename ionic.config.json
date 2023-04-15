@@ -1,0 +1,7 @@
+{
+  "name": "spaced-repetition-system-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
