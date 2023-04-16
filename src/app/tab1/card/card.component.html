@@ -1,0 +1,6 @@
+<div>
+  <div>{{ whenReview | date : "yyyy-MM-dd hh:mm a" }}</div>
+  <label [for]="formId">Q: {{ card.question }}</label>
+  <input [id]="formId" type="text" [formControl]="userAnswer" />
+  <button (click)="buttonClicked()">Submit</button>
+</div>

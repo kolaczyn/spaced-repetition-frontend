@@ -16,4 +16,8 @@ export class CardsService {
       .get<CardDto[]>(`${ENDPOINT}/v2/cards`)
       .pipe(shareReplay(1));
   }
+
+  answerCard(id: number, answer: string) {
+    return this.http.patch<CardDto>(`${ENDPOINT}/v2/cards/${id}`, { answer });
+  }
 }

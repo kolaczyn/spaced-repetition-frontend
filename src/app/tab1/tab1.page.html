@@ -11,7 +11,11 @@
     </ion-toolbar>
   </ion-header>
   <h1>Hello World</h1>
-  <div *ngFor="let card of cards$ | async">{{card.question}}</div>
+  <app-card
+    *ngFor="let card of cards$ | async"
+    [card]="card"
+    (submitAnswer)="answerCard($event)"
+  />
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
